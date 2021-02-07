@@ -1,5 +1,5 @@
 import React from "react";
-import Weeks from "./Weeks";
+import Weeks from "../Weeks";
 
 const CalendarWeeks = () => {
 

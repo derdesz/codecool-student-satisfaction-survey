@@ -1,5 +1,5 @@
 import React from "react";
-import Numbers from "./Numbers";
+import RatingForTen from "../RatingForTen";
 
 const ResponseTimes = () => {
 
@@ -13,7 +13,7 @@ const ResponseTimes = () => {
                         question or problem.</p>
                     <div className="ui hidden divider">
                     </div>
-                    <Numbers/>
+                    <RatingForTen/>
                 </div>
             </div>
         </React.Fragment>

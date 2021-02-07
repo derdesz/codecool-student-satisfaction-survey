@@ -1,25 +1,22 @@
 import './App.css';
 import React from 'react';
+import {BrowserRouter, Route} from "react-router-dom";
+import MainPage from "./components/MainPage";
+import LoginForm from "./components/login/LoginForm";
 import PictureBar from "./components/PictureBar";
-import AboutThisSurvey from "./components/AboutThisSurvey";
-import InfoAboutYou from "./components/InfoAboutYou";
-import WhichRoom from "./components/WhichRoom";
-import WhichLocation from "./components/WhichLocation";
-import CalendarWeeks from "./components/CalendarWeeks";
-import AdminAndIssues from "./components/AdminAndIssues";
-import ResponseTimes from "./components/ResponseTimes";
+
 
 function App() {
+
   return (
     <div className="App">
-      <PictureBar/>
-      <AboutThisSurvey/>
-      <InfoAboutYou/>
-      <WhichRoom/>
-      <WhichLocation/>
-      <CalendarWeeks/>
-      <AdminAndIssues/>
-      <ResponseTimes/>
+      <BrowserRouter>
+          <div>
+              <PictureBar/>
+              <Route path="/" exact component={MainPage}/>
+              <Route path="/login" component={LoginForm}/>
+          </div>
+      </BrowserRouter>
 
 
     </div>

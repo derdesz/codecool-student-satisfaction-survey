@@ -1,7 +1,7 @@
 import React from "react";
 import Number from "./Number";
 
-const Numbers = () => {
+const RatingForTen = () => {
     const ratingNumbers = [];
 
     function generateRatingNumbers () {
@@ -53,4 +53,4 @@ const Numbers = () => {
 
 
 
-export default Numbers;
+export default RatingForTen;

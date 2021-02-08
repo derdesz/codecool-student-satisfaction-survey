@@ -23,7 +23,13 @@ const CalendarWeeks = () => {
                 <div className="ui form">
                     <div className="align-left">
                         <p className="question required">How many calendar weeks have you spent in the current room?</p>
-                        <Weeks weeks={weeks}/>
+
+                        <select className="ui search dropdown weeks">
+                            <Weeks weeks={weeks}/>
+                            {/*<option value="">Gender</option>*/}
+                            {/*<option value="1">Male</option>*/}
+                            {/*<option value="0">Female</option>*/}
+                        </select>
                     </div>
                 </div>
             </div>

@@ -47,4 +47,14 @@ h1 {
     display: inline-block;
 }
 
+.bar-container {
+    height: 400px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+select.ui.dropdown {
+    width: fit-content;
+    margin-left: 20px;
+}
 

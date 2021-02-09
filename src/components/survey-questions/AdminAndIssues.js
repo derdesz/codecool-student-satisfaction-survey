@@ -1,6 +1,21 @@
 import React from "react";
 
-const AdminAndIssues = () => {
+const questionData = {
+    id: 5,
+    question_content: "How do you rate administration and issues related to your study contract in Codecool?",
+    group_id: 3,
+    question_type: "input",
+    answer_content: ""
+}
+
+const AdminAndIssues = ({surveyResult}) => {
+
+    const handleInputChange = (event) => {
+        questionData.answer_content = event.target.value;
+        surveyResult[4] = questionData;
+        // console.log(surveyResult);
+    }
+
 
     return (
         <React.Fragment>
@@ -12,7 +27,7 @@ const AdminAndIssues = () => {
                     <div className="header">
                         <h1>How do you rate administration and issues related to your study contract in Codecool?</h1>
                         <div className="padded">
-                            <input type="text" placeholder="Leírás (nem kötelező)"/>
+                            <input type="text" placeholder="Leírás (nem kötelező)" onChange={handleInputChange}/>
                         </div>
                     </div>
                 </div>

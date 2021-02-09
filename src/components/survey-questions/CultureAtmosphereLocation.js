@@ -1,6 +1,19 @@
 import React from "react";
 
-const CultureAtmosphereLocation = () => {
+const questionData = {
+    id: 9,
+    question_content: "About culture, atmosphere, location",
+    group_id: 5,
+    question_type: "input",
+    answer_content: ""
+}
+
+const CultureAtmosphereLocation = ({surveyResult}) => {
+
+    const handleInputChange = (event) => {
+        questionData.answer_content = event.target.value;
+        surveyResult[8] = questionData;
+    }
 
     return (
         <React.Fragment>
@@ -12,7 +25,7 @@ const CultureAtmosphereLocation = () => {
                     <div className="header">
                         <h1>About culture, atmosphere, location</h1>
                         <div className="padded">
-                            <input type="text" placeholder="Leírás (nem kötelező)"/>
+                            <input type="text" placeholder="Leírás (nem kötelező)" onChange={handleInputChange}/>
                         </div>
                     </div>
                 </div>

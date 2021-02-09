@@ -1,6 +1,19 @@
 import React from "react";
 
-const StudiesMentoring = () => {
+const questionData = {
+    id: 14,
+    question_content: "About the studies, mentoring",
+    group_id: 6,
+    question_type: "input",
+    answer_content: ""
+}
+
+const StudiesMentoring = ({surveyResult}) => {
+
+    const handleInputChange = (event) => {
+        questionData.answer_content = event.target.value;
+        surveyResult[13] = questionData;
+    }
 
     return (
         <React.Fragment>
@@ -12,7 +25,7 @@ const StudiesMentoring = () => {
                     <div className="header">
                         <h1>About the studies, mentoring</h1>
                         <div className="padded">
-                            <input type="text" placeholder="Leírás (nem kötelező)"/>
+                            <input type="text" placeholder="Leírás (nem kötelező)" onChange={handleInputChange} />
                         </div>
                     </div>
                 </div>

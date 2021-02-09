@@ -1,7 +1,20 @@
 import React from "react";
 import RatingForTen from "../RatingForTen";
 
-const StaffValidReaction = () => {
+const questionData = {
+    id: 7,
+    question_content: "There's valid reaction (something happens) from Codecool office staff when I raise a problem.",
+    group_id: 3,
+    question_type: "0-10",
+    answer_content: ""
+}
+
+const StaffValidReaction = ({surveyResult}) => {
+
+    const clickCheckBox = (event) => {
+        questionData.answer_content = (event.target.value);
+        surveyResult[6] = questionData;
+    }
 
     return (
         <React.Fragment>
@@ -12,7 +25,7 @@ const StaffValidReaction = () => {
                     <p className="question">There's valid reaction (something happens) from Codecool office staff when I raise a problem.</p>
                     <div className="ui hidden divider">
                     </div>
-                    <RatingForTen/>
+                    <RatingForTen clickCheckBox={clickCheckBox} questionId={questionData.id}/>
                 </div>
             </div>
         </React.Fragment>

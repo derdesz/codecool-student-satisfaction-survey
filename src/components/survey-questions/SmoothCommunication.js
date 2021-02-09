@@ -1,7 +1,20 @@
 import React from "react";
 import RatingForTen from "../RatingForTen";
 
-const SmoothCommunication = () => {
+const questionData = {
+    id: 8,
+    question_content: "The process of study/job contracting, signing paperwork is smooth, communication about it is satisfactory.",
+    group_id: 3,
+    question_type: "0-10",
+    answer_content: ""
+}
+
+const SmoothCommunication = ({surveyResult}) => {
+
+    const clickCheckBox = (event) => {
+        questionData.answer_content = (event.target.value);
+        surveyResult[7] = questionData;
+    }
 
     return (
         <React.Fragment>
@@ -12,7 +25,7 @@ const SmoothCommunication = () => {
                     <p className="question">The process of study/job contracting, signing paperwork is smooth, communication about it is satisfactory.</p>
                     <div className="ui hidden divider">
                     </div>
-                    <RatingForTen/>
+                    <RatingForTen clickCheckBox={clickCheckBox} questionId={questionData.id}/>
                 </div>
             </div>
         </React.Fragment>

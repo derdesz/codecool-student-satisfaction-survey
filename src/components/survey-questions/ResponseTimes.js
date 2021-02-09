@@ -1,7 +1,20 @@
 import React from "react";
 import RatingForTen from "../RatingForTen";
 
-const ResponseTimes = () => {
+const questionData = {
+    id: 6,
+    question_content: "Codecool office staff has good response times when there's a question or problem.",
+    group_id: 3,
+    question_type: "0-10",
+    answer_content: ""
+}
+
+const ResponseTimes = ({surveyResult}) => {
+
+    const clickCheckBox = (event) => {
+        questionData.answer_content = (event.target.value);
+        surveyResult[5] = questionData;
+    }
 
     return (
         <React.Fragment>
@@ -13,7 +26,7 @@ const ResponseTimes = () => {
                         question or problem.</p>
                     <div className="ui hidden divider">
                     </div>
-                    <RatingForTen/>
+                    <RatingForTen clickCheckBox={clickCheckBox} questionId={questionData.id}/>
                 </div>
             </div>
         </React.Fragment>

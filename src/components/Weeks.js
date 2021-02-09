@@ -1,10 +1,10 @@
 import React from "react";
 
-const Weeks = ({weeks}) => {
+const Weeks = ({weeks, chooseWeek}) => {
 
     return (
         weeks.map((week) => (
-            <option value={week}>{week}</option>
+            <option name={week} value={week} key={week}>{week}</option>
         ))
     );
 }

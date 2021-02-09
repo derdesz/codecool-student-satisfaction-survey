@@ -1,7 +1,7 @@
 import React from "react";
 import Number from "./Number";
 
-const RatingForTen = () => {
+const RatingForTen = ({clickCheckBox, questionId}) => {
     const ratingNumbers = [];
 
     function generateRatingNumbers () {
@@ -21,7 +21,7 @@ const RatingForTen = () => {
 
                 <div className="ten wide column ">
                     <div className="ui grid">
-                        <Number ratingNumbers={ratingNumbers}/>
+                        <Number ratingNumbers={ratingNumbers} clickCheckBox={clickCheckBox} questionId={questionId}/>
                     </div>
                 </div>
                 <div className="three wide column">

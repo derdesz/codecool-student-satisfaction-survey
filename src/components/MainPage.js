@@ -27,15 +27,19 @@ import SubmitSurvey from "./SubmitSurvey";
 
 const MainPage = () => {
 
-    const surveyResult = {};
+    const surveyResult = [];
 
 
     const onSubmit = () => {
-        // console.log(surveyResult);
+        console.log(surveyResult);
         axios({
             method: 'POST',
             url: '/submit-survey',
-            surveyResult: surveyResult
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            data: surveyResult
+
         }).then(console.log(surveyResult))
             .catch(er => {
                 console.log("no data sorry ", er);
@@ -45,30 +49,31 @@ const MainPage = () => {
 
     return (
         <React.Fragment>
-                <LoginButton/>
-                <AboutThisSurvey/>
-                <SubmitSurvey onSubmit={onSubmit}/>
-                <InfoAboutYou surveyResult={surveyResult}/>
-                <WhichRoom surveyResult={surveyResult}/>
-                <WhichLocation surveyResult={surveyResult}/>
-                <CalendarWeeks surveyResult={surveyResult}/>
-                <AdminAndIssues surveyResult={surveyResult}/>
-                <ResponseTimes surveyResult={surveyResult}/>
-                <StaffValidReaction surveyResult={surveyResult}/>
-                <SmoothCommunication surveyResult={surveyResult}/>
-                <CultureAtmoshereLocation surveyResult={surveyResult}/>
-                <CoolAtmosphere surveyResult={surveyResult}/>
-                <BelongToGroup surveyResult={surveyResult}/>
-                <CodecoolLocation surveyResult={surveyResult}/>
-                <CleanCalmEnvironment surveyResult={surveyResult}/>
-                <StudiesMentoring surveyResult={surveyResult}/>
-                <TheoreticalMaterials surveyResult={surveyResult}/>
-                <CurriculumRequirements surveyResult={surveyResult}/>
-                <HardSkillsHelp surveyResult={surveyResult}/>
-                <SoftSkillsHelp surveyResult={surveyResult}/>
-                <EmotionalSupport surveyResult={surveyResult}/>
-                <CodecoolMethodology surveyResult={surveyResult}/>
-                <TeamWork surveyResult={surveyResult}/>
+            <LoginButton/>
+            <AboutThisSurvey/>
+            <InfoAboutYou surveyResult={surveyResult}/>
+            <WhichRoom surveyResult={surveyResult}/>
+            <WhichLocation surveyResult={surveyResult}/>
+            <CalendarWeeks surveyResult={surveyResult}/>
+            <AdminAndIssues surveyResult={surveyResult}/>
+            <ResponseTimes surveyResult={surveyResult}/>
+            <StaffValidReaction surveyResult={surveyResult}/>
+            <SmoothCommunication surveyResult={surveyResult}/>
+            <CultureAtmoshereLocation surveyResult={surveyResult}/>
+            <CoolAtmosphere surveyResult={surveyResult}/>
+            <BelongToGroup surveyResult={surveyResult}/>
+            <CodecoolLocation surveyResult={surveyResult}/>
+            <CleanCalmEnvironment surveyResult={surveyResult}/>
+            <StudiesMentoring surveyResult={surveyResult}/>
+            <TheoreticalMaterials surveyResult={surveyResult}/>
+            <CurriculumRequirements surveyResult={surveyResult}/>
+            <HardSkillsHelp surveyResult={surveyResult}/>
+            <SoftSkillsHelp surveyResult={surveyResult}/>
+            <EmotionalSupport surveyResult={surveyResult}/>
+            <CodecoolMethodology surveyResult={surveyResult}/>
+            <TeamWork surveyResult={surveyResult}/>
+            <SubmitSurvey onSubmit={onSubmit}/>
+
         </React.Fragment>
     );
 }

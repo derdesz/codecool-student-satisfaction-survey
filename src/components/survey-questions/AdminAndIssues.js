@@ -12,7 +12,7 @@ const AdminAndIssues = ({surveyResult}) => {
 
     const handleInputChange = (event) => {
         questionData.answer_content = event.target.value;
-        surveyResult[4] = questionData;
+        surveyResult.push(questionData);
         // console.log(surveyResult);
     }
 

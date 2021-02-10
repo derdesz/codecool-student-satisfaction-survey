@@ -13,7 +13,7 @@ const BelongToGroup = ({surveyResult}) => {
 
     const clickCheckBox = (event) => {
         questionData.answer_content = (event.target.value);
-        surveyResult[10] = questionData;
+        surveyResult.push(questionData);
     }
 
     return (

@@ -24,7 +24,7 @@ const CalendarWeeks = ({surveyResult}) => {
     const chooseWeek = (event) => {
         console.log(event.target.value);
         questionData.answer_content = (event.target.value);
-        surveyResult[3] = questionData;
+        surveyResult.push(questionData);
     }
 
 

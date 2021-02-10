@@ -12,7 +12,7 @@ const WhichLocation = ({surveyResult}) => {
 
     const clickCheckBox = (event) => {
         questionData.answer_content = (event.target.value);
-        surveyResult[2] = questionData;
+        surveyResult.push(questionData);
         // console.log(event.target.value);
         // console.log(whichLocation);
     }

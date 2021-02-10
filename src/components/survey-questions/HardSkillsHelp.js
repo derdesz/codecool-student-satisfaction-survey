@@ -13,7 +13,7 @@ const HardSkillsHelp = ({surveyResult}) => {
 
     const clickCheckBox = (event) => {
         questionData.answer_content = (event.target.value);
-        surveyResult[16] = questionData;
+        surveyResult.push(questionData);
     }
 
     return (

@@ -13,7 +13,7 @@ const CoolAtmosphere = ({surveyResult}) => {
 
     const clickCheckBox = (event) => {
         questionData.answer_content = (event.target.value);
-        surveyResult[9] = questionData;
+        surveyResult.push(questionData);
     }
 
     return (

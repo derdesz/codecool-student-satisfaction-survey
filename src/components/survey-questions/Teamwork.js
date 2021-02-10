@@ -14,7 +14,7 @@ const TeamWork = ({surveyResult}) => {
 
     const clickCheckBox = (event) => {
         questionData.answer_content = (event.target.value);
-        surveyResult[19] = questionData;
+        surveyResult.push(questionData);
     }
 
     return (

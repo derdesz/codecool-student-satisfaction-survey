@@ -13,7 +13,7 @@ const CleanCalmEnvironment = ({surveyResult}) => {
 
     const clickCheckBox = (event) => {
         questionData.answer_content = (event.target.value);
-        surveyResult[12] = questionData;
+        surveyResult.push(questionData);
     }
 
     return (

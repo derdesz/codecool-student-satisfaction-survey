@@ -12,7 +12,7 @@ const InfoAboutYou = ({surveyResult}) => {
 
     const handleInputChange = (event) => {
         questionData.answer_content = event.target.value;
-        surveyResult[0] = questionData;
+        surveyResult.push(questionData);
     }
 
     return (

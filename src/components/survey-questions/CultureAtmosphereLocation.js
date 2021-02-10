@@ -12,7 +12,7 @@ const CultureAtmosphereLocation = ({surveyResult}) => {
 
     const handleInputChange = (event) => {
         questionData.answer_content = event.target.value;
-        surveyResult[8] = questionData;
+        surveyResult.push(questionData);
     }
 
     return (
